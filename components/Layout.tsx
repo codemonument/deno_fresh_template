@@ -1,18 +1,17 @@
 import { ComponentChildren } from "preact";
+import { MainNav } from "./MainNav.tsx";
 
 type LayoutProps = {
   children: ComponentChildren;
 };
 
-export default function Layout(props: LayoutProps) {
+export function Layout(props: LayoutProps) {
   return (
-    <>
+    <div class="min-h-[100dvh] bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100">
       <header>
-        <nav>
-          <a href="/">Home</a>
-        </nav>
+        <MainNav></MainNav>
       </header>
       <main>{props.children}</main>
-    </>
+    </div>
   );
 }

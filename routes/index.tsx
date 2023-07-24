@@ -1,13 +1,14 @@
 import { Head } from "$fresh/runtime.ts";
 import { useSignal } from "@preact/signals";
 import Counter from "../islands/Counter.tsx";
-import Layout from "../components/Layout.tsx";
+import { Layout } from "../components/Layout.tsx";
 
 export default function Home() {
   const count = useSignal(3);
   return (
     <Layout>
-      <div class="px-4 py-8 mx-auto bg-[#86efac]">
+      {
+        /* <div class="px-4 py-8 mx-auto bg-[#86efac]">
         <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
           <img
             class="my-6"
@@ -23,7 +24,8 @@ export default function Home() {
           </p>
           <Counter count={count} />
         </div>
-      </div>
+      </div> */
+      }
     </Layout>
   );
 }
